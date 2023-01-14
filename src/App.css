@@ -1,0 +1,115 @@
+*{
+    margin:0;
+}
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.container2
+{
+    
+}
+
+.organs
+{
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+}
+.humanbody
+{
+    margin-left: 5vw;
+    width: 90vw;
+    height: 100vh;
+    position: fixed;
+}
+.para
+{
+    margin-top: 85vh;   
+    margin-left: 17vw ;
+    width: 70vw;
+    position: absolute;
+    color: whitesmoke;
+}
+#lungs
+{
+    margin-top: 11.1vh;
+    margin-left: 21.5vw;
+}
+#brain
+{
+    margin-top: 11.1vh;
+    margin-left: 66.5vw;
+}
+#liver
+{
+    margin-top: 27vh;
+    margin-left: 13.3vw;
+}
+#heart
+{
+    margin-top: 27vh;
+    margin-left: 74.6vw;
+}
+#kidney
+{
+    margin-top: 44.9vh;
+    margin-left: 9vw;
+}
+#stomach
+{
+    margin-top: 44.9vh;
+    margin-left: 79vw;
+}
+#pancreas
+{
+    margin-top: 62.6vh;
+    margin-left: 9vw;
+
+}
+#malerep
+{
+    margin-top: 62.6vh;
+    margin-left: 79vw;
+}
+#intestine
+{
+    margin-top: 80.5vh;
+    margin-left: 17.4vw;
+}
+#femrep
+{
+    margin-top: 80.5vh;
+    margin-left: 70.2vw;
+}
+.box
+{
+    margin: 9.5vh;
+    width: 12vw;
+    height: 15.7vh;
+    position: fixed;
+    display: block;
+    border-radius: 50%;
+    display: inline-block;
+}
+.invisible
+{
+    transform: translate(-1000%,-1000%); 
+}
+.btn 
+{
+    margin: 1vh; 
+    border: 0.25vh solid black;
+    padding:4vh;
+    transition-duration: 0.4s;
+    background-color: #4CAF50;
+    position: relative;
+    margin-bottom: 30vh;
+}
+  
+.btn:hover 
+{
+    color: white;
+}
