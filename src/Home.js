@@ -1,5 +1,4 @@
 import React from 'react'
-import Organs from './Organs.js';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import description from './description';
@@ -29,18 +28,8 @@ function Home() {
   let navigate = useNavigate();
 
   function handleTouchStart(id) {
-    description.map(item=>{
-      if(id.target.id===item.name)
-      {
-        setText(item.name);
-        const msg = new SpeechSynthesisUtterance();
-        msg.voice = selectedVoice;
-        msg.text=item.name;
-        window.speechSynthesis.speak(msg);
-      }
-    });
+    navigate('/organs', { state: { prop1: id.target.id } });
   }
-
    
     return (
     <div>
