@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Organs(props) {
-    console.log(props.id)
+function Organs() {
+    console.log('hello')
   return (
     <div>
       
@@ -9,4 +9,4 @@ function Organs(props) {
   )
 }
 
-export default Organs
+export default Organs;
