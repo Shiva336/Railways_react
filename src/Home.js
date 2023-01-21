@@ -16,12 +16,12 @@ function Home() {
     const fetchVoices =()=>{
             return new Promise((resolve, reject)=> {
             setInterval(() => {
-            let voices=window.speechSynthesis.getVoices()
+            let voices=window.speechSynthesis.getVoices();
                 if (voices.length !== 0) {
                     resolve(voices);
                     clearInterval();
                 }
-            }, 10);
+            }, 40);
         }
     )
     }
@@ -48,7 +48,6 @@ function Home() {
         setText(item.name);
         const msg = new SpeechSynthesisUtterance();
         msg.voice = selectedVoice;
-        console.log(selectedVoice);
         msg.text=item.name;
         window.speechSynthesis.speak(msg);
       }
