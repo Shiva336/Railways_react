@@ -1,4 +1,5 @@
 import React from 'react'
+import Organs from './Organs.js';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import description from './description';
@@ -37,35 +38,45 @@ function Home() {
     const handleVoiceChange = (e) => {
       setSelectedVoice(voices[e.target.value]);
   };
-
   let navigate = useNavigate();
 
   function handleTouchStart(id) {
-    navigate('/organs', { state: { prop1: id.target.id } });
+    description.map(item=>{
+      if(id.target.id===item.name)
+      {
+        setText(item.name);
+        const msg = new SpeechSynthesisUtterance();
+        msg.voice = selectedVoice;
+        msg.text=item.name;
+        window.speechSynthesis.speak(msg);
+        navigate('/organs', {state:{id: item.id } });
+      }
+    });
   }
+
    
     return (
     <div>
         <div className="container">
-        <select onChange={handleVoiceChange}>
+        <select className="selectVoice" onChange={handleVoiceChange}>
                      <option value={0}>
                         English
                     </option>
-                    <option value={188}>
+                    <option value={189}>
                         Malayalam
                     </option>
             </select>
                 <img className="humanbody" src={require('./new.jpg')} alt="Human Anatomy" />
-                <div className="box" id="lungs" onTouchStart={handleTouchStart.bind()}></div>
-                <div className="box" id="brain" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="liver" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="heart" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="kidney" onTouchStart={handleTouchStart.bind()}> </div> 
-                <div className="box" id="stomach" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="pancreas" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="malerep" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="intestine" onTouchStart={handleTouchStart.bind()}> </div>
-                <div className="box" id="femrep" onTouchStart={handleTouchStart.bind()}> </div>
+                <div className="box" id="lungs" onTouchStart={handleTouchStart}></div>
+                <div className="box" id="brain" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="liver" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="heart" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="kidney" onTouchStart={handleTouchStart}> </div> 
+                <div className="box" id="stomach" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="pancreas" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="malerep" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="intestine" onTouchStart={handleTouchStart}> </div>
+                <div className="box" id="femrep" onTouchStart={handleTouchStart}> </div>
         </div>
     </div>
   );

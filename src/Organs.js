@@ -5,11 +5,13 @@ import { useLocation } from 'react-router-dom';
 import Topbar from './components/topbar/topbar';
 import Sidebar from './components/sidebar/sidebar'
 
-function Organs() {
+function Organs(props) {
   const [text, setText] = useState('');
   const [voices, setVoices] = useState([]);
   const [selectedVoice, setSelectedVoice] = useState(0);
+  const {state} = useLocation();
 
+  console.log(state);
   useEffect(() => {
       const fetchVoices = async () => {
           const voices = window.speechSynthesis.getVoices();
@@ -35,27 +37,8 @@ function getOrganDetails(id) {
     }
     });
 }
-
-// getOrganDetails(id);
-// setText(textvalue);
-
-      // const msg = new SpeechSynthesisUtterance();
-      // msg.voice = selectedVoice;
-      // msg.text=item.description;
-      // console.log(msg);
-      // window.speechSynthesis.speak(msg); 
   return (
   <div>
-      {/* <div className="container">
-      <select onChange={handleVoiceChange}>
-                   <option value={0}>
-                      English
-                  </option>
-                  <option value={188}>
-                      Malayalam
-                  </option>
-          </select>
-      </div> */}
       <>
       <Topbar />
       <div className="homeContainer">
