@@ -1,9 +1,9 @@
 .sidebar {
     flex: 3;
-    height: calc(100vh - 50px);
+    height:100vh;
     overflow-y: scroll;
     position: sticky;
-    top: 50px;
+    background-color: bisque;
   }
   
   ::-webkit-scrollbar {
@@ -14,6 +14,11 @@
   }
   ::-webkit-scrollbar-thumb {
     background-color: rgb(179, 179, 179);
+  }
+
+  .sidebarHead {
+    margin-top: 2vh;
+    margin-left: 2vw;
   }
   
   .sidebarWrapper {

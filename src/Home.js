@@ -3,6 +3,7 @@ import Organs from './Organs.js';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import description from './description';
+import "./Home.css"
 
 function Home() {
 
@@ -58,7 +59,7 @@ function Home() {
     return (
     <div>
         <div className="container">
-        <select className="selectVoice" onChange={handleVoiceChange}>
+        <select  onChange={handleVoiceChange}>
                      <option value={0}>
                         English
                     </option>

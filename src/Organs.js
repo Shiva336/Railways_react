@@ -2,8 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import description from './description';
 import { useLocation } from 'react-router-dom';
-import Topbar from './components/topbar/topbar';
 import Sidebar from './components/sidebar/sidebar'
+import "./Organs.css"
 
 function Organs(props) {
   const [text, setText] = useState('');
@@ -38,13 +38,13 @@ function getOrganDetails(id) {
     });
 }
   return (
-  <div>
-      <>
-      <Topbar />
-      <div className="homeContainer">
+  <div className='organContainer'>
+      <div>
         <Sidebar />
       </div>
-    </>
+      <div className="organBody">
+        HELLO
+      </div>
   </div>
 );
 }
