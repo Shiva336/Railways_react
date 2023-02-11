@@ -25,25 +25,17 @@ function Organs(props) {
     setSelectedVoice(voices[e.target.value]);
 };
 
-const location = useLocation();
-const id = location.state.prop1;
-let textvalue = "";
-function getOrganDetails(id) {
-  description.map(item=>{
-    if(id===item.name)
-    {
-      textvalue = item.name;
-      return;
-    }
-    });
-}
+const images = [
+  "/images/lungs.png","/images/brain.jpg","/images/liver.png","/images/heart.jpg","/images/kidney.jpg",
+  "/images/stomach.jpg","/images/pancreas.jpg","/images/penis.jpg","/images/intestine.jpg","/images/vagina.png"
+];
   return (
   <div className='organContainer'>
       <div>
-        <Sidebar />
+        <Sidebar item = {state.item}/>
       </div>
       <div className="organBody">
-        HELLO
+        <img className="organImage" src={images[state.item.id-1]} alt="" />
       </div>
   </div>
 );

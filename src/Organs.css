@@ -1,3 +1,8 @@
 .organContainer {
     display: flex;
 }
+
+.organImage {
+    width: 68vw;
+    height: 63vh;
+}

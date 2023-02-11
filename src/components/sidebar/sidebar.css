@@ -4,6 +4,7 @@
     overflow-y: scroll;
     position: sticky;
     background-color: bisque;
+    width: 20vw;
   }
   
   ::-webkit-scrollbar {
@@ -18,7 +19,7 @@
 
   .sidebarHead {
     margin-top: 2vh;
-    margin-left: 2vw;
+    margin-left: 1vw;
   }
   
   .sidebarWrapper {
