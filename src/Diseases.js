@@ -1,16 +1,33 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import description from './description';
+import Sidebar from './components/sidebar/sidebar';
+import "./Diseases.css"
 
 function Diseases(props) {
     const {state} = useLocation(); 
-    const id = state.item.id;
-    const disease = state.item.disease[0];
-    const name = ""
+    const disease = state.disease;
+    console.log(disease);
     return (
-    <div>
-      <div className="intro">
-        
+    <div className='diseaseContainer'>
+      <div>
+        <Sidebar item = {state.item}/>
+      </div>
+      <div className="diseaseDetails">
+        <h1 className='heading'>{disease.name}</h1>
+        <div className="description">
+          <p className="descriptionText diseaseText">{disease.desc}</p>
+        </div>
+
+        <div className="symptoms">
+          <h1 className='heading'>Symptoms</h1>
+          <p className="symptomText diseaseText">{disease.symptoms}</p>
+        </div>
+
+        <div className="symptoms">
+          <h1 className='heading'>Treatments</h1>
+          <p className="treatmentText diseaseText">{disease.treatments}</p>
+        </div>
       </div>
     </div>
   )

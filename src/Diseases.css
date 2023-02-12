@@ -1,0 +1,19 @@
+.diseaseContainer {
+    display: flex;
+}
+
+.diseaseDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    margin-left: 0.5vw;
+}
+
+.diseaseText {
+    font-size: 20px;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+    margin-left: 0.5vw;
+}
