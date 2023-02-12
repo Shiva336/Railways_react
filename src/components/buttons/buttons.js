@@ -1,18 +1,36 @@
-import React from 'react'
-import "./buttons.css"
+import React,{useState} from 'react';
+import "./Buttons.css"
 
-function buttons() {
-  const startSpeak = ()=> {};
+function Buttons(props) {
+  console.log(props.item)
+  const [stop,setStop]=useState(false);
+  
+  const startSpeak = ()=> {
+    speechSynthesis.cancel();
+    const msg = new SpeechSynthesisUtterance();
+    msg.text=props.item;
+    window.speechSynthesis.speak(msg);
 
-  const stopSpeak = ()=> {};
+  };
+
+  const stopSpeak = ()=> {
+        speechSynthesis.pause();
+        setStop(prev=>!prev);
+  };
+
+  const continueSpeak = ()=>{
+        speechSynthesis.resume();
+        setStop(prev=>!prev);
+  }
   return (
     <div>
       <span>
-          <button className="startSpeak speechButtons" onTouchStart={startSpeak}>Speak</button>
-          <button className="stopSpeak speechButtons" onTouchStart={stopSpeak}>Stop</button>
+          <button className="speechButtons" id="startSpeak" onTouchStart={startSpeak}>Restart</button>
+          {!stop&&<button className="speechButtons"  id="stopSpeak" onTouchStart={stopSpeak}>Stop</button>}
+          {stop&&<button className="speechButtons"  id="continueSpeak" onTouchStart={continueSpeak}>Continue</button>}
       </span>
     </div>
   )
 }
 
-export default buttons
+export default Buttons;

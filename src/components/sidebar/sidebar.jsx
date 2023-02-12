@@ -1,4 +1,4 @@
-import "./sidebar.css";
+import "./Sidebar.css";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import Organs from "../../pages/Organs/Organs";

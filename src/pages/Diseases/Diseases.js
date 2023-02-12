@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import description from '../Description/description';
 import Sidebar from '../../components/sidebar/sidebar';
 import "./Diseases.css"
+import Buttons from '../../components/buttons/Buttons';
 
 function Diseases(props) {
     const {state} = useLocation(); 
@@ -28,9 +29,10 @@ function Diseases(props) {
           <h1 className='heading'>Treatments</h1>
           <p className="treatmentText diseaseText">{disease.treatments}</p>
         </div>
+              <Buttons/>
       </div>
     </div>
   )
 }
 
-export default Diseases
+export default Diseases;

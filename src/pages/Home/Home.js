@@ -3,6 +3,7 @@ import Organs from '../Organs/Organs.js';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import description from '../Description/description.js';
+import descriptionM from '../Description/descriptionM.js';
 import "./Home.css"
 
 function Home() {
@@ -37,22 +38,27 @@ function Home() {
   let navigate = useNavigate();
 
   function handleTouchStart(id) {
-    description.map(item=>{
-      if(id.target.id===item.name)
-      {
-        const msg = new SpeechSynthesisUtterance();
-        msg.voice = selectedVoice;
-        if(selectedVoice.lang==='en-US')
-        msg.text=item.e.name;
-        else
-        msg.text=item.m.name;
-        window.speechSynthesis.speak(msg);
-        if(selectedVoice.lang==='en-US')
-        navigate('/organs', {state:{item: item.e}});
-        else
-        navigate('/organs', {state:{item: item.m}})
-      }
-    });
+    if(selectedVoice.lang==='en-US')
+      {description.map(item=>{
+        if(id.target.id===item.name)
+        {
+          const msg = new SpeechSynthesisUtterance();
+          msg.voice = selectedVoice;
+          msg.text=item.description;
+          window.speechSynthesis.speak(msg);
+          navigate('/organs', {state:{item: item}})
+      }})}
+    else{
+        descriptionM.map(item=>{
+        if(id.target.id===item.name)
+        {
+          const msg = new SpeechSynthesisUtterance();
+          msg.voice = selectedVoice;
+          msg.text=item.description;
+          window.speechSynthesis.speak(msg);
+          navigate('/organs', {state:{item: item}});
+        }})
+    };
   }
 
    
