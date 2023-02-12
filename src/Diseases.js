@@ -5,8 +5,6 @@ import description from './description';
 function Diseases(props) {
     const {state} = useLocation(); 
     console.log(state);
-    const id = state.item.id;
-    const disease = state.item.disease[0];
     const name = ""
     return (
     <div>
