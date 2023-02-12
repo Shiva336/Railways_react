@@ -2,15 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import description from '../Description/description';
 import { useLocation, useNavigate } from 'react-router-dom';
-<<<<<<< HEAD:src/Organs.js
-import Sidebar from './components/sidebar/Sidebar'
-import "./Organs.css"
-import Buttons from './components/buttons/Buttons';
-=======
 import Sidebar from '../../components/sidebar/sidebar'
-import Buttons from '../../components/buttons/buttons';
+import Buttons from '../../components/buttons/Buttons';
 import "./Organs.css"
->>>>>>> a03da62fbceaa4111d2d531063b8fe6a6dedc247:src/pages/Organs/Organs.js
 
 function Organs(props) {
   const [text, setText] = useState('');
