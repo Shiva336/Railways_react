@@ -1,13 +1,13 @@
 import "./Sidebar.css";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
-import buttons from "../buttons/Buttons";
+import Organs from "../../pages/Organs/Organs";
 
 export default function Sidebar(props) {
   const [downover,setDownOver]=useState(false);
   const [downdis, setDownDis] = useState(false);
   const navigate = useNavigate();
-    function changeover(){
+  function changeover(){
     console.log(props);
     setDownOver(prev=>!prev);
   }
@@ -22,7 +22,9 @@ export default function Sidebar(props) {
   return (
     <div className="sidebar">
       <div className="sidebarHead">
-        <h1>{name[props.item.id - 1]}</h1>
+        <h1 onTouchStart={()=> {
+          navigate('/organs', {state:{item: props.item}});
+        }}>{name[props.item.id - 1]}</h1>
       </div>
       <div className="sidebarWrapper">
         <ul className="sidebarList">

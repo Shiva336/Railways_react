@@ -1,8 +1,7 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
-import description from './description';
-import Sidebar from './components/sidebar/Sidebar';
-import Buttons from './components/buttons/Buttons';
+import { useLocation, useNavigate } from 'react-router-dom';
+import description from '../Description/description';
+import Sidebar from '../../components/sidebar/sidebar';
 import "./Diseases.css"
 
 function Diseases(props) {
