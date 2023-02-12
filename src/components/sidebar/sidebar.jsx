@@ -8,7 +8,6 @@ export default function Sidebar(props) {
   const [downdis, setDownDis] = useState(false);
   const navigate = useNavigate();
   function changeover(){
-    console.log(props);
     setDownOver(prev=>!prev);
   }
   function changedis(){
@@ -24,7 +23,7 @@ export default function Sidebar(props) {
       <div className="sidebarHead">
         <h1 onTouchStart={()=> {
           navigate('/organs', {state:{item: props.item}});
-        }}>{name[props.item.id - 1]}</h1>
+        }}>{props.item.name}</h1>
       </div>
       <div className="sidebarWrapper">
         <ul className="sidebarList">

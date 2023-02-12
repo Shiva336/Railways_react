@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import description from '../Description/description';
-import Sidebar from '../../components/sidebar/sidebar';
+import Sidebar from '../../components/sidebar/Sidebar';
 import "./Diseases.css"
 import Buttons from '../../components/buttons/Buttons';
 

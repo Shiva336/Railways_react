@@ -40,7 +40,7 @@ function Home() {
   function handleTouchStart(id) {
     if(selectedVoice.lang==='en-US')
       {description.map(item=>{
-        if(id.target.id===item.name)
+        if(id.target.id===item.key)
         {
           const msg = new SpeechSynthesisUtterance();
           msg.voice = selectedVoice;
@@ -50,7 +50,7 @@ function Home() {
       }})}
     else{
         descriptionM.map(item=>{
-        if(id.target.id===item.name)
+        if(id.target.id===item.key)
         {
           const msg = new SpeechSynthesisUtterance();
           msg.voice = selectedVoice;

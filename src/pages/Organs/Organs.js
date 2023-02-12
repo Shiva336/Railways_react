@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import description from '../Description/description';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Sidebar from '../../components/sidebar/sidebar'
+import Sidebar from '../../components/sidebar/Sidebar'
 import Buttons from '../../components/buttons/Buttons';
 import "./Organs.css"
 
