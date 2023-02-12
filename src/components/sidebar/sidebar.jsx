@@ -1,6 +1,7 @@
-import "./sidebar.css";
+import "./Sidebar.css";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import buttons from "../buttons/Buttons";
 
 export default function Sidebar(props) {
   const [downover,setDownOver]=useState(false);

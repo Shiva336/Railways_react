@@ -1,7 +1,8 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import description from './description';
-import Sidebar from './components/sidebar/sidebar';
+import Sidebar from './components/sidebar/Sidebar';
+import Buttons from './components/buttons/Buttons';
 import "./Diseases.css"
 
 function Diseases(props) {
@@ -28,9 +29,10 @@ function Diseases(props) {
           <h1 className='heading'>Treatments</h1>
           <p className="treatmentText diseaseText">{disease.treatments}</p>
         </div>
+              <Buttons/>
       </div>
     </div>
   )
 }
 
-export default Diseases
+export default Diseases;

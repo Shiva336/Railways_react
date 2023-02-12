@@ -2,9 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import description from './description';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Sidebar from './components/sidebar/sidebar'
+import Sidebar from './components/sidebar/Sidebar'
 import "./Organs.css"
-import Buttons from './components/buttons/buttons';
+import Buttons from './components/buttons/Buttons';
 
 function Organs(props) {
   const [text, setText] = useState('');
@@ -46,7 +46,7 @@ const images = [
         <img className="organImage" src={images[state.item.id-1]} alt="" />
         <br></br>
         <br></br>
-        <Buttons />
+        <Buttons item={state.item.description}/>
       </div>
   </div>
 );

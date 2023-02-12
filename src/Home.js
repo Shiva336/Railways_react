@@ -1,5 +1,4 @@
-import React from 'react'
-import Organs from './Organs.js';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import description from './description';
@@ -43,9 +42,9 @@ function Home() {
         const msg = new SpeechSynthesisUtterance();
         msg.voice = selectedVoice;
         if(selectedVoice.lang==='en-US')
-        msg.text=item.e.name;
+        msg.text=item.e.description;
         else
-        msg.text=item.m.name;
+        msg.text=item.m.description;
         window.speechSynthesis.speak(msg);
         if(selectedVoice.lang==='en-US')
         navigate('/organs', {state:{item: item.e}});
