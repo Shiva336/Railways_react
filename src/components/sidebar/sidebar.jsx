@@ -15,7 +15,7 @@ export default function Sidebar(props) {
   }
   
   function handleDisease(disease) {
-    navigate('/diseases', {state:{disease: disease}});
+    navigate('/diseases', {state:{disease: disease, item: props.item,}});
   }
   const name = ["Lungs", "Brain", "Liver", "Heart", "Kidney", "Stomach", "Pancreas", "Male Reproductive Organ", "Intestine", "Female Reprodutive Organ" ]
   return (
