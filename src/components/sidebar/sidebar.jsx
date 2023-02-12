@@ -1,15 +1,21 @@
 import "./sidebar.css";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar(props) {
   const [downover,setDownOver]=useState(false);
   const [downdis, setDownDis] = useState(false);
+  const navigate = useNavigate();
     function changeover(){
     console.log(props);
     setDownOver(prev=>!prev);
   }
   function changedis(){
     setDownDis(prev=>!prev);
+  }
+  
+  function handleDisease(disease) {
+    navigate('/diseases', {state:{disease: disease, item: props.item,}});
   }
   const name = ["Lungs", "Brain", "Liver", "Heart", "Kidney", "Stomach", "Pancreas", "Male Reproductive Organ", "Intestine", "Female Reprodutive Organ" ]
   return (
@@ -27,7 +33,9 @@ export default function Sidebar(props) {
           <span className="sidebarListItemText"><div className={downdis ? "arrow-right" : "arrow-down"} onClick={changedis}></div><h2>Diseases</h2></span>
             {!downdis&&<ul>
               {props.item.diseases.map((disease)=>{
-                return(<li key={disease.name}>{disease.name}</li>)
+                return(<li key={disease.name} onTouchStart={()=> {
+                  handleDisease(disease);
+                }}>{disease.name}</li>)
               })}
             </ul>}
           </li>
