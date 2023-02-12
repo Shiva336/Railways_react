@@ -50,7 +50,7 @@ function Home() {
         msg.voice = selectedVoice;
         msg.text=item.name;
         window.speechSynthesis.speak(msg);
-        navigate('/organs', {state:{id: item.id } });
+        navigate('/organs', {state:{item: item}});
       }
     });
   }
