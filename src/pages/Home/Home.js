@@ -1,8 +1,8 @@
 import React from 'react'
-import Organs from './Organs.js';
+import Organs from '../Organs/Organs.js';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import description from './description';
+import description from '../Description/description.js';
 import "./Home.css"
 
 function Home() {
