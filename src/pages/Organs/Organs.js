@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import description from './description';
+import description from '../Description/description';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Sidebar from './components/sidebar/sidebar'
+import Sidebar from '../../components/sidebar/sidebar'
+import Buttons from '../../components/buttons/buttons';
 import "./Organs.css"
-import Buttons from './components/buttons/buttons';
 
 function Organs(props) {
   const [text, setText] = useState('');

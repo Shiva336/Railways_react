@@ -3,9 +3,6 @@ export default
     {
         id:1,
         name:`lungs`,
-        e:{
-        id:1,
-        name:`lungs`,
         description:"The lungs are a pair of spongy, air-filled organs located on either side of the chest (thorax). The trachea (windpipe) conducts inhaled air into the lungs through its tubular branches, called bronchi. ",
         diseases: [
             {
@@ -45,36 +42,8 @@ export default
                  treatments:`Treatment generally includes supplemental oxygen and medication.`
                 }
         ]
-    },
-    m:{
-        id:1,
-        name:`ശ്വാസകോശം`,
-        description:"നെഞ്ചിന്റെ ഇരുവശത്തും (തോറാക്സ്) സ്ഥിതി ചെയ്യുന്ന ഒരു ജോടി സ്പോഞ്ച്, വായു നിറഞ്ഞ അവയവങ്ങളാണ് ശ്വാസകോശം. ശ്വാസനാളം (കാറ്റ് പൈപ്പ്) അതിന്റെ ട്യൂബുലാർ ശാഖകളിലൂടെ ശ്വസിക്കുന്ന വായു ശ്വാസകോശത്തിലേക്ക് കൊണ്ടുപോകുന്നു, ബ്രോങ്കി എന്ന് വിളിക്കുന്നു.",
-        diseases:[
-            {
-             name:`1`,
-             desc:``,
-             symptoms:``,
-             treatments:``},
-            {
-             name:`2`,
-             desc:``,
-             symptoms:``,
-             treatments:``},
-            {
-             name:`3`,
-             desc:``,
-             symptoms:``,
-             treatments:``},
-        ]
-
-    }
-
 },
     {
-        id:2,
-        name:"brain",
-        e:{
         id:2,
         name:"brain",
         description:"A brain is an organ that serves as the center of the nervous system in all vertebrate and most invertebrate animals. It is located in the head, usually close to the sensory organs for senses such as vision.", 
@@ -107,17 +76,8 @@ export default
              treatments:`Medication can help control the symptoms of Parkinson's.`
             }
          ]
-    },
-        m:{
-        id:1,
-        name:`തലച്ചോറ്`,
-
-    }
 },
     {
-        id:3,
-        name:"liver",
-        e:{
         id:3,
         name:"liver",
         description:"The liver is a large, meaty organ that sits on the right side of the belly. Weighing about 3 pounds, the liver is reddish-brown in color and feels rubbery to the touch. Normally you can't feel the liver, because it's protected by the rib cage.",
@@ -150,16 +110,8 @@ export default
              treatments:`Treatment involves hydration, nutritional care and stopping alcohol use. Steroid drugs can help reduce liver inflammation.`
             }
          ]
-    },
-    m:{
-        id:3,
-        name:"കരൾ",
-    }
 },
     {
-        id:4,
-        name:"heart",
-        e:{
         id:4,
         name:"heart",
         description:"The heart is a muscular organ about the size of a fist, located just behind and slightly left of the breastbone. The heart pumps blood through the network of arteries and veins called the cardiovascular system.", 
@@ -192,17 +144,8 @@ export default
              treatments:`Eating a healthier diet with less salt, exercising regularly and taking medication can help lower blood pressure.`
             }
          ]
-    },
-    m:{
-        id:4,
-        name:"ഹൃദയം",
-
-    }
 },
     {
-        id:5,
-        name:"kidney",
-        e:{
         id:5,
         name:"kidney",
         description:"The kidneys are a pair of bean-shaped organs on either side of your spine, below your ribs and behind your belly. Each kidney is about 4 or 5 inches long, roughly the size of a large fist.",
@@ -235,16 +178,8 @@ export default
              treatments:`In addition to addressing the underlying cause, treatments include fluids, medication and dialysis.`
             }
          ]
-    },
-    m:{
-        id:5,
-        name:"വൃക്ക",
-    }
 },
     {
-        id:6,
-        name:"stomach",
-        e:{
         id:6,
         name:"stomach",
         description:"The stomach is a muscular organ located on the left side of the upper abdomen. The stomach receives food from the esophagus. As food reaches the end of the esophagus, it enters the stomach through a muscular valve called the lower esophageal sphincter.",
@@ -277,16 +212,8 @@ export default
              treatments:`Treatment options include surgery, medication, radiation and chemotherapy.`
             }
          ]
-    },
-    m:{
-            id:6,
-            name:"ആമാശയം",
-    }
 },
     {
-        id:7,
-        name:"pancreas",
-        e:{
         id:7,
         name:"pancreas",
         description:"The pancreas is about 6 inches long and sits across the back of the abdomen, behind the stomach. The head of the pancreas is on the right side of the abdomen and is connected to the duodenum.",
@@ -319,16 +246,8 @@ export default
              treatments:`People who experience symptoms usually require gallbladder removal surgery. Gallstones that don't cause symptoms usually don't need treatment.`
             }
          ]
-    },
-    m:{
-            id:7,
-            name:"പാൻക്രിയാസ്",
-    }
 },
     {
-        id:8,
-        name:"malerep",
-        e:{
         id:8,
         name:"malerep",
         description:"The male reproductive system is mostly located outside of the body. These external organs include the penis, scrotum and testicles. Internal organs include the vas deferens, prostate and urethra.",
@@ -361,16 +280,8 @@ export default
              treatments:`Some types of prostate cancer grow slowly. In some of these cases, monitoring is recommended. Other types are aggressive and require radiation, surgery, hormone therapy, chemotherapy or other treatments.`
             }
          ]
-    },
-    m:{
-        id:8,
-        name:"പുരുഷ പ്രത്യുത്പാദന അവയവം",
-    }
 },
     {
-        id:9,
-        name:"intestine",
-        e:{
         id:9,
         name:"intestine",
         description:"The intestines are a long, continuous tube running from the stomach to the anus. Most absorption of nutrients and water happen in the intestines. The intestines include the small intestine, large intestine, and rectum.",
@@ -403,16 +314,8 @@ export default
              treatments:`Some people can control their symptoms by managing diet, lifestyle and stress. Others will need medication and counselling.`
             }
          ]
-    },
-    m:{
-        id:9,
-        name:"കുടൽ",
-    }
 },
     {
-        id:10,
-        name:"femrep",
-        e:{
         id:10,
         name:"femrep",
         description:"The female reproductive organs include several key structures, such as the ovaries, uterus, vagina, and vulva. These organs are involved in fertility, conception, pregnancy, and childbirth.emale reproductive system",
@@ -445,11 +348,6 @@ export default
              treatments:`Treatments include birth control pills to regularise periods, medication called metformin to prevent diabetes, statins to control high cholesterol, hormones to increase fertility and procedures to remove excess hair.`
             }
          ]
-    },
-    m:{
-        id:10,
-        name:"സ്ത്രീ പ്രത്യുത്പാദന അവയവം",
-    }
 },
 ]
 
