@@ -1,0 +1,25 @@
+.backButton {
+    margin-top: 2vh;
+    position: absolute;
+    margin-left: 71vw;
+    width: 8vw;
+    height: 3vh;
+    background-color: rgb(116, 206, 206);
+    border-radius: 10px;
+}
+
+.speechButtons {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.startSpeak {
+    background-color: rgb(140, 225, 13);
+    margin-left: 9vw;
+}
+
+.stopSpeak {
+    background-color: rgb(221, 78, 78);
+    margin-left: 30vw;
+}

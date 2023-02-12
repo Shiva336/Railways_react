@@ -1,15 +1,17 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import description from './description';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar'
 import "./Organs.css"
+import Buttons from './components/buttons/buttons';
 
 function Organs(props) {
   const [text, setText] = useState('');
   const [voices, setVoices] = useState([]);
   const [selectedVoice, setSelectedVoice] = useState(0);
   const {state} = useLocation();
+  const navigate = useNavigate();
 
   console.log(state);
   useEffect(() => {
@@ -25,6 +27,11 @@ function Organs(props) {
     setSelectedVoice(voices[e.target.value]);
 };
 
+const handleBackButton = ()=> {
+  window.speechSynthesis.cancel();
+  navigate("/");
+}
+
 const images = [
   "/images/lungs.png","/images/brain.jpg","/images/liver.png","/images/heart.jpg","/images/kidney.jpg",
   "/images/stomach.jpg","/images/pancreas.jpg","/images/penis.jpg","/images/intestine.jpg","/images/vagina.png"
@@ -34,8 +41,13 @@ const images = [
       <div>
         <Sidebar item = {state.item}/>
       </div>
+
       <div className="organBody">
+        <button className="backButton" onTouchStart={handleBackButton}>Back</button>
         <img className="organImage" src={images[state.item.id-1]} alt="" />
+        <br></br>
+        <br></br>
+        <Buttons />
       </div>
   </div>
 );
