@@ -2,24 +2,31 @@ export default
 [
     {
         id:1,
-        name:"lungs",
+        name:`lungs`,
         description:"The lungs are a pair of spongy, air-filled organs located on either side of the chest (thorax). The trachea (windpipe) conducts inhaled air into the lungs through its tubular branches, called bronchi. ",
         diseases: [
-           {
-            name: "asthma",
-            desc: "",
-            causes: "",
-           },
-           {
-            name: "cancer",
-            desc: "",
-            causes: "",
-           },
-           {
-            name: "",
-            desc: "",
-            causes: "",
-           }
+            {
+                name: "asthma",
+                desc: "A condition in which a person's airways become inflamed, narrow and swell and produce extra mucus, which makes it difficult to breathe. Asthma can be minor or it can interfere with daily activities. In some cases, it may lead to a life-threatening attack. Asthma may cause difficulty breathing, chest pain, cough and wheezing. The symptoms may sometimes flare up. Asthma can usually be managed with rescue inhalers to treat symptoms (salbutamol) and controller inhalers that prevent symptoms (steroids). Severe cases may require longer-acting inhalers that keep the airways open (formoterol, salmeterol, tiotropium), as well as inhalant steroids.",
+                symptoms: `Asthma may cause difficulty breathing, chest pain, cough and wheezing. The symptoms may sometimes flare up.
+                People may experience:
+                Cough: can occur at night, during exercise, can be chronic, dry, with phlegm, mild, or severe Respiratory: difficulty breathing, wheezing, breathing through the mouth, fast breathing, frequent respiratory infections, rapid breathing, or shortness of breath at night`,
+                treatments:`Treatment consists of self care and bronchodilators
+                Asthma can usually be managed with rescue inhalers to treat symptoms (salbutamol) and controller inhalers that prevent symptoms (steroids). Severe cases may require longer-acting inhalers that keep the airways open (formoterol, salmeterol, tiotropium), as well as inhalant steroids.
+                Medications: Bronchodilator, Steroid and Anti-inflammatory
+                Self-care: Quitting smoking
+                Supportive care: Oxygen therapy`
+                },
+                {
+                 name: "cancer",
+                 desc: "",
+                 causes: "",
+                },
+                {
+                 name: "",
+                 desc: "",
+                 causes: "",
+                }
         ]
     },
     {
@@ -160,9 +167,16 @@ export default
         description:"The male reproductive system is mostly located outside of the body. These external organs include the penis, scrotum and testicles. Internal organs include the vas deferens, prostate and urethra.",
         diseases: [
             {
-             name: "asthma",
-             desc: "",
-             causes: "",
+            name: "asthma",
+            desc: "A condition in which a person's airways become inflamed, narrow and swell and produce extra mucus, which makes it difficult to breathe. Asthma can be minor or it can interfere with daily activities. In some cases, it may lead to a life-threatening attack. Asthma may cause difficulty breathing, chest pain, cough and wheezing. The symptoms may sometimes flare up. Asthma can usually be managed with rescue inhalers to treat symptoms (salbutamol) and controller inhalers that prevent symptoms (steroids). Severe cases may require longer-acting inhalers that keep the airways open (formoterol, salmeterol, tiotropium), as well as inhalant steroids.",
+            symptoms: `Asthma may cause difficulty breathing, chest pain, cough and wheezing. The symptoms may sometimes flare up.
+            People may experience:
+            Cough: can occur at night, during exercise, can be chronic, dry, with phlegm, mild, or severe Respiratory: difficulty breathing, wheezing, breathing through the mouth, fast breathing, frequent respiratory infections, rapid breathing, or shortness of breath at night`,
+            treatments:`Treatment consists of self care and bronchodilators
+            Asthma can usually be managed with rescue inhalers to treat symptoms (salbutamol) and controller inhalers that prevent symptoms (steroids). Severe cases may require longer-acting inhalers that keep the airways open (formoterol, salmeterol, tiotropium), as well as inhalant steroids.
+            Medications: Bronchodilator, Steroid and Anti-inflammatory
+            Self-care: Quitting smoking
+            Supportive care: Oxygen therapy`
             },
             {
              name: "cancer",
@@ -221,3 +235,5 @@ export default
          ]
     },
 ]
+
+
