@@ -42,9 +42,15 @@ function Home() {
       {
         const msg = new SpeechSynthesisUtterance();
         msg.voice = selectedVoice;
-        msg.text=item.name;
+        if(selectedVoice.lang==='en-US')
+        msg.text=item.e.name;
+        else
+        msg.text=item.m.name;
         window.speechSynthesis.speak(msg);
-        navigate('/organs', {state:{item: item}});
+        if(selectedVoice.lang==='en-US')
+        navigate('/organs', {state:{item: item.e}});
+        else
+        navigate('/organs', {state:{item: item.m}})
       }
     });
   }
