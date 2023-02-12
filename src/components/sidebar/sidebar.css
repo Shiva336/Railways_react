@@ -4,6 +4,7 @@
     overflow-y: scroll;
     position: sticky;
     background-color: bisque;
+    width: 20vw;
   }
   
   ::-webkit-scrollbar {
@@ -18,7 +19,7 @@
 
   .sidebarHead {
     margin-top: 2vh;
-    margin-left: 2vw;
+    margin-left: 1vw;
   }
   
   .sidebarWrapper {
@@ -32,7 +33,6 @@
   }
   
   .sidebarListItem {
-    display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
@@ -59,4 +59,36 @@
     list-style: none;
   }
   
-  
+    .arrow-right {
+      position: relative;
+      width: 0;
+      height: 0;
+      border-top: 1vw solid transparent;
+      border-bottom: 1vw solid transparent;
+      border-left: 1vw solid red;
+    }
+
+    .arrow-down {
+      position: relative;
+      top: 1vh;
+      width: 0;
+      height: 0;
+      border-left: 1vw solid transparent;
+      border-right: 1vw solid transparent;    
+      border-top: 1vw solid #f00;
+      }
+
+
+    .sidebarListItemText{
+      display:flex;
+    }
+
+
+    @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(179deg);
+  }
+}

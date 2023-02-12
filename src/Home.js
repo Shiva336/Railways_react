@@ -6,11 +6,6 @@ import description from './description';
 import "./Home.css"
 
 function Home() {
-
-    const sv = document.getElementById("selectvoice");
-    const container2 = document.querySelector("div.container2");
-    const humanbody= document.querySelector("img.humanbody");
-    const [text, setText] = useState('');
     const [voices, setVoices] = useState([]);
     const [selectedVoice, setSelectedVoice] = useState(0);
 
@@ -45,12 +40,11 @@ function Home() {
     description.map(item=>{
       if(id.target.id===item.name)
       {
-        setText(item.name);
         const msg = new SpeechSynthesisUtterance();
         msg.voice = selectedVoice;
         msg.text=item.name;
         window.speechSynthesis.speak(msg);
-        navigate('/organs', {state:{id: item.id } });
+        navigate('/organs', {state:{item: item}});
       }
     });
   }
