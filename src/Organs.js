@@ -13,7 +13,6 @@ function Organs(props) {
   const {state} = useLocation();
   const navigate = useNavigate();
 
-  console.log(state);
   useEffect(() => {
       const fetchVoices = async () => {
           const voices = window.speechSynthesis.getVoices();
